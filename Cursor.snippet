@@ -21,9 +21,10 @@
 			<Declarations>
 			<Literal><ID>LoopVar</ID></Literal>
 			<Literal><ID>CursorName</ID></Literal>
+			<Literal><ID>TypeName</ID></Literal>
 			</Declarations>
 			<Code Language="SQL"><![CDATA[
-DECLARE @$LoopVar$ TYPENAME;
+DECLARE @$LoopVar$ AS $TypeName$;
 DECLARE @$CursorName$ as CURSOR;
 SET @$CursorName$ = CURSOR FOR
 $QueryToLoop$;
